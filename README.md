@@ -1,8 +1,8 @@
 # MoMo SMS Transaction Analytics Platform
 
-The **MoMo SMS Transaction Analytics Platform** is a planned full-stack application for processing Mobile Money (MoMo) transaction data provided in XML format. The system will transform raw SMS transaction information into structured, validated data that can be stored, analyzed, and visualized.
+The **MoMo SMS Transaction Analytics Platform** processes Mobile Money (MoMo) transaction data in XML format. It transforms raw SMS transaction information into structured, validated data for storage, analysis, and visualization.
 
-The eventual platform will be designed to:
+The platform will:
 
 - Extract transaction information from XML
 - Clean and normalize transaction data
@@ -13,7 +13,7 @@ The eventual platform will be designed to:
 - Provide an interactive web dashboard
 - Allow users to explore transactions through charts, statistics, tables, search, and filtering
 
-> **Implementation status:** This repository is currently in the **Team Setup and Project Planning** phase. The architecture, commands, API, ETL pipeline, and dashboard described below are planned capabilities and should not be interpreted as completed features.
+> **Implementation status:** The repository is in the **Team Setup and Project Planning** phase. The architecture, commands, API, ETL pipeline, and dashboard described below are not yet implemented.
 
 ## Team
 
@@ -29,24 +29,22 @@ The eventual platform will be designed to:
 | Gahima Denilson Nziza | Member | [Nzizadenilson](https://github.com/Nzizadenilson) |
 | Oteniya Oluwatobi Jeremiah | Member | [oteniyatobi](https://github.com/oteniyatobi) |
 
-Additional members can be added as rows to this table.
-
 ## Week 1 Deliverables
 
-The current assignment focuses on planning and project setup rather than full application implementation. Week 1 establishes the team repository, collaboration process, high-level architecture, and Agile/Scrum organization.
+Week 1 covers project setup, collaboration, architecture, and Agile/Scrum organization.
 
 - [x] Team GitHub repository created
 - [x] Team collaboration setup completed
-- [x] High-level architecture planned
+- [x] High-level architecture defined
 - [x] Agile/Scrum organization established
 
-The ETL pipeline, database, API, and dashboard remain planned for future implementation phases.
+The ETL pipeline, database, API, and dashboard will be implemented in later phases.
 
 ## Problem Statement
 
 MoMo transaction information may be stored in SMS messages and represented in XML format. Raw transaction data is difficult to analyze directly because it can contain inconsistent formatting, embedded information, duplicate records, missing fields, and different representations of amounts, dates, phone numbers, and transaction types.
 
-The proposed platform will transform this raw information into structured transaction records. Through extraction, cleaning, normalization, categorization, validation, storage, and analysis, users will be able to understand their transaction history through a web-based dashboard.
+The platform will transform this information into structured transaction records through extraction, cleaning, normalization, categorization, validation, storage, and analysis. Users will explore their transaction history through a web dashboard.
 
 ## Project Objectives
 
@@ -63,9 +61,9 @@ The proposed platform will transform this raw information into structured transa
 11. Use Git and GitHub for collaborative development.
 12. Follow Agile/Scrum project management practices.
 
-## Planned System Workflow
+## System Workflow
 
-The intended high-level data flow is:
+The high-level data flow is:
 
 ```mermaid
 flowchart TD
@@ -84,54 +82,54 @@ flowchart TD
 
 ### Data Source
 
-The data source will consist of raw MoMo SMS transaction data represented in XML format.
+The data source is raw MoMo SMS transaction data in XML format.
 
 ### ETL Layer
 
-The Extract, Transform, Load (ETL) layer will be responsible for:
+The Extract, Transform, Load (ETL) layer will:
 
-- Extracting transaction information from XML
-- Transforming source values into consistent formats
-- Cleaning and normalizing records
-- Categorizing transactions
-- Validating required fields and business rules
-- Loading valid records into the database
-- Recording invalid or unparseable records for review
+- Extract transaction information from XML
+- Transform source values into consistent formats
+- Clean and normalize records
+- Categorize transactions
+- Validate required fields and business rules
+- Load valid records into the database
+- Record invalid or unparseable records for review
 
 ### Database Layer
 
-The database layer will store cleaned and structured transaction records, together with supporting categories and processing information. The design will be refined during implementation.
+The database layer will store cleaned transaction records, categories, and processing information. The design will be refined during implementation.
 
 ### Analytics Layer
 
-The analytics layer will calculate transaction statistics, totals, category summaries, trends, and other measures needed by the dashboard.
+The analytics layer will calculate transaction statistics, totals, category summaries, and trends for the dashboard.
 
 ### Backend/API Layer
 
-An optional FastAPI backend may expose processed transaction data and analytics to the frontend. Possible endpoints include:
+A FastAPI backend may expose processed transaction data and analytics to the frontend. Endpoints may include:
 
 ```text
 GET /transactions
 GET /analytics
 ```
 
-These endpoints are planned and do not currently represent an implemented API contract.
+These endpoints are not yet implemented.
 
 ### Frontend Layer
 
-The planned dashboard will use HTML, CSS, JavaScript, and Chart.js to present transaction information through tables, filters, statistics, and interactive charts.
+The dashboard will use HTML, CSS, JavaScript, and Chart.js to present transaction information through tables, filters, statistics, and interactive charts.
 
 ### User Layer
 
-Users will interact with the dashboard to explore transaction information, review summaries, search records, apply filters, and understand financial trends.
+Users will explore transaction information, review summaries, search records, apply filters, and analyze financial trends.
 
 ## System Architecture Diagram
 
-The architecture diagram is maintained in [Miro](https://miro.com/app/board/uXjVHq1pkp8=/?share_link_id=500817655064) as the editable architecture source and will also be exported to `docs/architecture.png` for inclusion in the repository.
+The editable architecture diagram is maintained in [Miro](https://miro.com/app/board/uXjVHq1pkp8=/?share_link_id=500817655064) and will be exported to `docs/architecture.png`.
 
 ## Technology Stack
 
-The following technologies are planned. The stack may be refined as implementation progresses.
+Technology stack:
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -147,9 +145,9 @@ The following technologies are planned. The stack may be refined as implementati
 | Version Control | Git / GitHub | Collaboration and source control |
 | Project Management | Trello | Agile task management |
 
-## Planned Repository Organization
+## Repository Organization
 
-The planned repository organization is:
+The repository will follow this structure:
 
 ```text
 .
@@ -200,23 +198,19 @@ The planned repository organization is:
    └── architecture.png
 ```
 
-Major directory responsibilities are expected to be:
+Directory responsibilities:
 
 - `web/`: frontend styles, scripts, and static assets.
 - `data/`: raw and processed data, ETL logs, and dead-letter records. The database will be generated during implementation rather than treated as source code.
 - `etl/`: XML extraction, transformation, categorization, validation, loading, and pipeline configuration.
 - `api/`: optional FastAPI application, database access, and response schemas.
-- `scripts/`: planned helper commands for running ETL, exporting data, and serving the frontend.
+- `scripts/`: helper commands for running ETL, exporting data, and serving the frontend.
 - `tests/`: unit, integration, API, and other automated tests as the implementation grows.
 - `docs/`: architecture, database, and other project documentation.
 
-## Project Structure
-
-The planned repository structure is documented above and will be updated as implementation details are finalized.
-
 ## ETL Pipeline
 
-The ETL pipeline will convert raw XML transaction data into validated records suitable for database storage and analysis.
+The ETL pipeline converts raw XML transaction data into validated records for database storage and analysis.
 
 ### Extract
 
@@ -253,7 +247,7 @@ Verify that records contain valid and required information before they are loade
 
 ### Load
 
-Store valid records in the relational database. Invalid or unparseable records should be recorded separately for investigation.
+Store valid records in the relational database. Record invalid or unparseable records separately for investigation.
 
 ```mermaid
 flowchart LR
@@ -267,13 +261,13 @@ flowchart LR
 
 ## Database
 
-The planned relational database will store structured transaction records and supporting processing information. It may contain entities such as:
+The relational database will store structured transaction records and processing information. It may contain:
 
 - Transactions
 - Categories
 - Processing logs
 
-The database design is not finalized and will be refined during development based on the source XML structure and application requirements.
+The database design will be refined during development based on the source XML structure and application requirements.
 
 ### Database ERD
 
@@ -281,7 +275,7 @@ The database ERD will be developed during the database design phase after the Mo
 
 ## Dashboard
 
-The planned dashboard will provide an interactive way for users to explore transaction data. Potential components include:
+The dashboard will provide an interactive interface for exploring transaction data. Components include:
 
 - Total transactions
 - Total money received
@@ -299,24 +293,22 @@ The planned dashboard will provide an interactive way for users to explore trans
 
 ### Dashboard Preview
 
-Dashboard mockups and screenshots will be added during the frontend development phase.
-
-No dashboard screenshot is available during the current planning phase.
+Dashboard mockups and screenshots will be added during frontend development.
 
 ## API
 
-The API is an optional or bonus component planned for a later implementation phase. Possible endpoints include:
+The API is an optional component for a later implementation phase. Endpoints may include:
 
 ```text
 GET /transactions
 GET /analytics
 ```
 
-`GET /transactions` is intended to provide transaction records, potentially with search and filter parameters. `GET /analytics` is intended to provide calculated totals, category summaries, and trends. These endpoints do not currently exist unless they are added during implementation.
+`GET /transactions` will provide transaction records with optional search and filter parameters. `GET /analytics` will provide totals, category summaries, and trends. These endpoints are not yet implemented.
 
 ## Error Handling
 
-Invalid or unparseable records should be handled separately rather than silently discarded. The planned error path is:
+Invalid or unparseable records are handled separately rather than discarded. The error path is:
 
 ```text
 Invalid XML / Transaction
@@ -324,7 +316,7 @@ Invalid XML / Transaction
 Dead Letter / Error Log
 ```
 
-Planned locations for this information are:
+Log locations:
 
 ```text
 data/logs/etl.log
@@ -333,7 +325,7 @@ data/logs/dead_letter/
 
 ## Testing
 
-Testing will be introduced alongside implementation. The planned strategy includes:
+The test strategy includes:
 
 - XML parser unit tests
 - Cleaning and normalization tests
@@ -342,11 +334,11 @@ Testing will be introduced alongside implementation. The planned strategy includ
 - API tests if the API is implemented
 - Frontend testing where appropriate
 
-The `tests/` directory will contain the automated test suite, including tests for parsing, normalization, categorization, database behavior, and other completed components.
+The `tests/` directory contains tests for parsing, normalization, categorization, database behavior, and other implemented components.
 
 ## Agile / Scrum
 
-The team will use Agile/Scrum practices to organize development. Work will be divided into manageable tasks, assigned to team members, reviewed, and tracked throughout the project lifecycle.
+The team uses Agile/Scrum practices to organize development. Work is divided into tasks, assigned, reviewed, and tracked throughout the project.
 
 The basic workflow is:
 
@@ -354,11 +346,9 @@ The basic workflow is:
 To Do → In Progress → Done
 ```
 
-Tasks will be assigned, tracked, reviewed, and moved across the board as work progresses.
-
 ## Scrum Board
 
-Our team uses Trello to plan, assign, track, and manage project tasks.
+The team uses Trello to plan, assign, track, and manage project tasks.
 
 **Trello Board:** [MoMo SMS Data Processing System](https://trello.com/invite/b/6a9be789a3edbea0c02c814d/ATTI98b8476bd1ac679ac290000bd80b42e6E6C56482/momo-sms-data-processing-system)
 
@@ -376,7 +366,7 @@ Initial tasks include:
 
 ## Development Workflow
 
-The planned Git workflow is:
+The Git workflow is:
 
 ```text
 Task
@@ -425,7 +415,7 @@ Each developer should create their own local `.env` file based on `.env.example`
 
 ## Installation and Setup
 
-The following are preliminary setup instructions. Repository-specific commands may be refined as the project is implemented.
+Setup instructions:
 
 1. Clone the repository:
 
@@ -446,7 +436,7 @@ The following are preliminary setup instructions. Repository-specific commands m
    source venv/bin/activate
    ```
 
-4. Install the planned requirements:
+4. Install the requirements:
 
    ```bash
    pip install -r requirements.txt
@@ -454,11 +444,11 @@ The following are preliminary setup instructions. Repository-specific commands m
 
 5. Configure environment variables by creating a local `.env` file from `.env.example`.
 
-## Planned Commands
+## Commands
 
-The following commands are intended examples and are not claimed to be implemented during the planning phase.
+These commands are not yet implemented.
 
-Run the planned ETL pipeline:
+Run the ETL pipeline:
 
 ```bash
 python etl/run.py --xml data/raw/momo.xml
