@@ -1,0 +1,26 @@
+{
+    "transaction_categories" : {
+        "category_id" : 1001,
+        "category_name": "payment"
+    },
+
+    "transactions" : {
+        "transaction_id" : 2001,
+        "amount" : 2000.00,
+        "reference_number" : "59168184137",
+        "balance_after" : 3050.00,
+        "status" : "completed",
+        "fee" : 0.00,
+        "transaction_datetime": "2024-05-24 23:07:44",
+        "category_id": 1001,
+        "raw_sms_body" : "Your payment of 2,000 RWF to Alex Doe 14717 has been completed. Your new balance is 3,050 RWF."
+    },
+
+    "system_logs" : {
+        "log_id" : 3001,
+        "transaction_id" : 2001,
+        "log_level" : "INFO",
+        "log_message" : "Transaction completed successfully.",
+        "log_datetime": "2024-05-24 23:07:45"
+    }
+}
