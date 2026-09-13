@@ -22,5 +22,17 @@
         "log_level" : "INFO",
         "log_message" : "Transaction completed successfully.",
         "log_datetime": "2024-05-24 23:07:45"
+    },
+
+    "transaction_counterparties" : {
+        "transaction_id" : 2001,
+        "counterparty_id" : 4001,
+        "role" : "recipient"
+    },
+
+    "counterparties" : {
+        "counterparty_id" : 4001,
+        "name" : "Alex Doe",
+        "phone_number" : "********71"
     }
 }
