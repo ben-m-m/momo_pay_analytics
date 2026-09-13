@@ -145,68 +145,28 @@ Technology stack:
 | Version Control | Git / GitHub | Collaboration and source control |
 | Project Management | Trello | Agile task management |
 
-## Repository Organization
+## Codebase Structure
 
-The repository will follow this structure:
+The repository currently has the following structure:
 
 ```text
 .
 ├── README.md
-├── .env.example
 ├── .gitignore
-├── requirements.txt
-├── index.html
-│
-├── web/
-│   ├── styles.css
-│   ├── chart_handler.js
-│   └── assets/
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── logs/
-│       ├── etl.log
-│       └── dead_letter/
-│
-├── etl/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── parse_xml.py
-│   ├── clean_normalize.py
-│   ├── categorize.py
-│   ├── load_db.py
-│   └── run.py
-│
-├── api/
-│   ├── __init__.py
-│   ├── app.py
-│   ├── db.py
-│   └── schemas.py
-│
-├── scripts/
-│   ├── run_etl.sh
-│   ├── export_json.sh
-│   └── serve_frontend.sh
-│
-├── tests/
-│   ├── test_parse_xml.py
-│   ├── test_clean_normalize.py
-│   └── test_categorize.py
-│
-└── docs/
-   └── architecture.png
+├── modified_sms_v2.xml
+├── Digarams/
+│   ├── Architeture Diagram.png
+│   └── Database Architeture Diagram (Edited).png
+└── ERD Design/
+   ├── Documentaion.md
+   └── ERD Image.png
 ```
 
 Directory responsibilities:
 
-- `web/`: frontend styles, scripts, and static assets.
-- `data/`: raw and processed data, ETL logs, and dead-letter records. The database will be generated during implementation rather than treated as source code.
-- `etl/`: XML extraction, transformation, categorization, validation, loading, and pipeline configuration.
-- `api/`: optional FastAPI application, database access, and response schemas.
-- `scripts/`: helper commands for running ETL, exporting data, and serving the frontend.
-- `tests/`: unit, integration, API, and other automated tests as the implementation grows.
-- `docs/`: architecture, database, and other project documentation.
+- `modified_sms_v2.xml`: source MoMo SMS data used for analysis and processing.
+- `Digarams/`: architecture and database architecture diagram images.
+- `ERD Design/`: database ERD image and documentation explaining the schema decisions.
 
 ## ETL Pipeline
 
@@ -271,7 +231,11 @@ The database design will be refined during development based on the source XML s
 
 ### Database ERD
 
-The database ERD will be developed during the database design phase after the MoMo XML structure and transaction fields have been analyzed.
+The database ERD is available in the repository and in Lucidchart:
+
+- [ERD Image](ERD%20Design/ERD%20Image.png)
+- [ERD Design Documentation](ERD%20Design/Documentaion.md)
+- [Editable Lucidchart ERD](https://lucid.app/lucidchart/34908f11-d5b6-4716-b5be-23a0328c8ced/edit?viewport_loc=-19%2C0%2C2570%2C1094%2C0_0&invitationId=inv_1da15af1-75b6-4b3a-aa60-be9354d449e4)
 
 ## Dashboard
 
@@ -529,8 +493,8 @@ Phase 8 — Deployment & Final Presentation
 | Project Structure | Documented above |
 | Architecture Diagram | [Miro architecture board](https://miro.com/app/board/uXjVHq1pkp8=/?share_link_id=500817655064) |
 | Trello Board | [MoMo SMS Data Processing System](https://trello.com/invite/b/6a9be789a3edbea0c02c814d/ATTI98b8476bd1ac679ac290000bd80b42e6E6C56482/momo-sms-data-processing-system) |
-| Database ERD | Coming in Phase 3 |
-| Project Documentation | This README |
+| Database ERD | [ERD Image](ERD%20Design/ERD%20Image.png) · [Lucidchart ERD](https://lucid.app/lucidchart/34908f11-d5b6-4716-b5be-23a0328c8ced/edit?viewport_loc=-19%2C0%2C2570%2C1094%2C0_0&invitationId=inv_1da15af1-75b6-4b3a-aa60-be9354d449e4) |
+| Project Documentation | [README](README.md) · [ERD documentation](ERD%20Design/Documentaion.md) |
 
 ## Academic Context
 
