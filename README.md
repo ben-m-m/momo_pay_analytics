@@ -147,7 +147,7 @@ Technology stack:
 
 ## Codebase Structure
 
-The repository currently has the following structure:
+The repository follows this structure. The application folders below describe the planned implementation, while the XML data and design files have already been added to the repository:
 
 ```text
 .
@@ -157,9 +157,52 @@ The repository currently has the following structure:
 ├── Digarams/
 │   ├── Architeture Diagram.png
 │   └── Database Architeture Diagram (Edited).png
-└── ERD Design/
-   ├── Documentaion.md
-   └── ERD Image.png
+├── ERD Design/
+│   ├── Documentaion.md
+│   └── ERD Image.png
+├── .env.example
+├── requirements.txt
+├── index.html
+│
+├── web/
+│   ├── styles.css
+│   ├── chart_handler.js
+│   └── assets/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── logs/
+│       ├── etl.log
+│       └── dead_letter/
+│
+├── etl/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── parse_xml.py
+│   ├── clean_normalize.py
+│   ├── categorize.py
+│   ├── load_db.py
+│   └── run.py
+│
+├── api/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── db.py
+│   └── schemas.py
+│
+├── scripts/
+│   ├── run_etl.sh
+│   ├── export_json.sh
+│   └── serve_frontend.sh
+│
+├── tests/
+│   ├── test_parse_xml.py
+│   ├── test_clean_normalize.py
+│   └── test_categorize.py
+│
+└── docs/
+   └── architecture.png
 ```
 
 Directory responsibilities:
@@ -167,6 +210,13 @@ Directory responsibilities:
 - `modified_sms_v2.xml`: source MoMo SMS data used for analysis and processing.
 - `Digarams/`: architecture and database architecture diagram images.
 - `ERD Design/`: database ERD image and documentation explaining the schema decisions.
+- `web/`: frontend styles, scripts, and static assets.
+- `data/`: raw and processed data, ETL logs, and dead-letter records. The database will be generated during implementation rather than treated as source code.
+- `etl/`: XML extraction, transformation, categorization, validation, loading, and pipeline configuration.
+- `api/`: optional FastAPI application, database access, and response schemas.
+- `scripts/`: helper commands for running ETL, exporting data, and serving the frontend.
+- `tests/`: unit, integration, API, and other automated tests as the implementation grows.
+- `docs/`: architecture, database, and other project documentation.
 
 ## ETL Pipeline
 
