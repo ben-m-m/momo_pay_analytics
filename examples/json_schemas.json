@@ -1,0 +1,22 @@
+{
+    "_meta": {
+        "title": "JSON example schemas",
+        "description":"Momo sms xml databse - JSON serialization examples",
+        "source": "Single subscriber inbox (Momo sms xml backup)",
+        "notes": [
+            "The XML contains exactly one account owner (36521838).",
+            "There is no internal user table; ownership is modeled as a counterparty.",
+            "party_type='account_owner' identifies the subscriber.",
+            "role='account_holder' is used in transaction_counterparties for that subscriber."
+        ],
+        "file": {
+            "counterparty": "counterparty.json",
+            "transaction_categories": "transaction_categories.json",
+            "transaction_summary": "transaction_summary.json",
+            "transaction_complete": "transaction_complete.json",
+            "api_response_list": "api_response_list.json",
+            "system_logs": "system_logs.json",
+            "mapping": "sql_to_json_mapping.md"
+        }
+    }
+}

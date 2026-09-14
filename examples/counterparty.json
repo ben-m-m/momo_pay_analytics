@@ -1,0 +1,37 @@
+{
+    "person": {
+        "counterparty_id": 2,
+        "name": "Jane Smith",
+        "phone_number": null,
+        "party_type": "person",
+        "created_at": "2026-09-13 10:00:00"
+    },
+    "account_owner": {
+        "counterparty_id": 1,
+        "name": "Account Holder",
+        "phone_number": "36521838",
+        "party_type": "account_owner",
+        "created_at": "2026-09-13 09:00:00"
+    },
+    "merchant": {
+        "counterparty_id": 9,
+        "name": "DIRECT PAYMENT LTD",
+        "phone_number": null,
+        "party_type": "merchant",
+        "created_at": "2026-09-13 11:00:00"
+    },
+    "agent": {
+        "counterparty_id": 8,
+        "name": "Agent Sophia",
+        "phone_number": "250790777777",
+        "party_type": "agent",
+        "created_at": "2026-09-13 12:00:00"
+    },
+    "service": {
+        "counterparty_id": 10,
+        "name": "Airtime",
+        "phone_number": null,
+        "party_type": "system",
+        "created_at": "2026-09-13 13:00:00"
+    }
+}
