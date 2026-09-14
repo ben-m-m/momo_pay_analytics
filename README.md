@@ -154,7 +154,7 @@ The repository follows this structure. The application folders below describe th
 ├── README.md
 ├── .gitignore
 ├── modified_sms_v2.xml
-├── Digarams/
+├── Diagrams/
 │   ├── Architeture Diagram.png
 │   └── Database Architeture Diagram (Edited).png
 ├── ERD Design/
