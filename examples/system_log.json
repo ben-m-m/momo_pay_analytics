@@ -1,0 +1,26 @@
+{
+  "info_parsed": {
+    "log_id": 1,
+    "transaction_id": 1,
+    "log_type": "INFO",
+    "log_message": "Incoming transfer parsed",
+    "raw_message": null,
+    "created_at": "2024-05-10T16:30:58Z"
+  },
+  "otp_ignored": {
+    "log_id": 6,
+    "transaction_id": null,
+    "log_type": "OTP",
+    "log_message": "OTP SMS ignored (not a transaction)",
+    "raw_message": "Dear Customer, your MTN MoMo application one-time password is :2476. Do not share...",
+    "created_at": "2024-05-26T13:17:31Z"
+  },
+  "parse_fail": {
+    "log_id": 7,
+    "transaction_id": null,
+    "log_type": "PARSE_FAIL",
+    "log_message": "Message did not match any known template",
+    "raw_message": "Unrecognized promotional SMS received from M-Money.",
+    "created_at": "2024-05-26T13:20:00Z"
+  }
+}

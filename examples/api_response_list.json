@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "data": {
+    "transactions": [
+      {
+        "transaction_id": 1,
+        "financial_transaction_id": "76662021700",
+        "amount": 2000.00,
+        "currency": "RWF",
+        "status": "completed",
+        "transaction_datetime": "2024-05-10T16:30:51Z",
+        "category_name": "Incoming Transfer",
+        "counterparties": [
+          { "name": "Jane Smith",     "role": "sender" },
+          { "name": "Account Holder", "role": "account_holder" }
+        ]
+      },
+      {
+        "transaction_id": 8,
+        "financial_transaction_id": "13913173274",
+        "amount": 2000.00,
+        "currency": "RWF",
+        "status": "completed",
+        "transaction_datetime": "2024-05-12T11:41:28Z",
+        "category_name": "Airtime Purchase",
+        "counterparties": [
+          { "name": "Airtime",        "role": "receiver" },
+          { "name": "Account Holder", "role": "account_holder" }
+        ]
+      },
+      {
+        "transaction_id": 16,
+        "financial_transaction_id": "13947831685",
+        "external_transaction_id": "47842929",
+        "amount": 25000.00,
+        "currency": "RWF",
+        "status": "completed",
+        "transaction_datetime": "2024-05-14T21:01:00Z",
+        "category_name": "Merchant Debit",
+        "counterparties": [
+          { "name": "DIRECT PAYMENT LTD", "role": "merchant" },
+          { "name": "Account Holder",     "role": "account_holder" }
+        ]
+      }
+    ],
+    "pagination": { "page": 1, "per_page": 10, "total": 19, "total_pages": 2 }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "incoming_transfer": {
+    "transaction_id": 1,
+    "financial_transaction_id": "76662021700",
+    "external_transaction_id": null,
+    "account_number": "36521838",
+    "amount": 2000.00,
+    "currency": "RWF",
+    "balance_after": 2000.00,
+    "status": "completed",
+    "fee": 0.00,
+    "sms_received_at": "2024-05-10T16:30:58Z",
+    "transaction_datetime": "2024-05-10T16:30:51Z",
+    "raw_sms_body": "You have received 2000 RWF from Jane Smith (*****013) on your mobile money account at 2024-05-10 16:30:51. Message from sender: . Your new balance:2000 RWF. Financial Transaction Id: 76662021700.",
+    "category": {
+      "category_id": 1,
+      "category_name": "Incoming Transfer",
+      "category_type": "incoming_transfer"
+    },
+    "parties": [
+      { "counterparty_id": 2, "name": "Jane Smith",     "role": "sender",         "phone_number": null,       "party_type": "person" },
+      { "counterparty_id": 1, "name": "Account Holder", "role": "account_holder", "phone_number": "36521838", "party_type": "account_owner" }
+    ],
+    "logs": [
+      { "log_id": 1, "log_type": "INFO", "log_message": "Incoming transfer parsed",
+        "created_at": "2024-05-10T16:30:58Z" }
+    ]
+  },
+
+  "merchant_debit": {
+    "transaction_id": 16,
+    "financial_transaction_id": "13947831685",
+    "external_transaction_id": "47842929",
+    "account_number": "36521838",
+    "amount": 25000.00,
+    "currency": "RWF",
+    "balance_after": 4060.00,
+    "status": "completed",
+    "fee": 0.00,
+    "sms_received_at": "2024-05-14T21:01:09Z",
+    "transaction_datetime": "2024-05-14T21:01:00Z",
+    "raw_sms_body": "*164*S*Y'ello,A transaction of 25000 RWF by DIRECT PAYMENT LTD on your MOMO account was successfully completed at 2024-05-14 21:01:00. Your new balance:4060 RWF. Fee was 0 RWF. Financial Transaction Id: 13947831685. External Transaction Id: 47842929.*EN#",
+    "category": {
+      "category_id": 8,
+      "category_name": "Merchant Debit",
+      "category_type": "merchant_debit"
+    },
+    "parties": [
+      { "counterparty_id": 9, "name": "DIRECT PAYMENT LTD", "role": "merchant",       "phone_number": null,       "party_type": "merchant" },
+      { "counterparty_id": 1, "name": "Account Holder",      "role": "account_holder", "phone_number": "36521838", "party_type": "account_owner" }
+    ],
+    "logs": [
+      { "log_id": 3, "log_type": "INFO", "log_message": "Merchant debit parsed",
+        "created_at": "2024-05-14T21:01:09Z" }
+    ]
+  },
+
+  "withdrawal_via_agent": {
+    "transaction_id": 17,
+    "financial_transaction_id": "14098463509",
+    "external_transaction_id": null,
+    "account_number": "36521838",
+    "amount": 20000.00,
+    "currency": "RWF",
+    "balance_after": 6400.00,
+    "status": "completed",
+    "fee": 350.00,
+    "sms_received_at": "2024-05-26T02:10:34Z",
+    "transaction_datetime": "2024-05-26T02:10:27Z",
+    "raw_sms_body": "You Abebe Chala CHEBUDIE (*****036) have via agent: Agent Sophia (250790777777), withdrawn 20000 RWF from your mobile money account: 36521838 at 2024-05-26 02:10:27 and you can now collect your money in cash. Your new balance: 6400 RWF. Fee paid: 350 RWF. Message from agent: 1. Financial Transaction Id: 14098463509.",
+    "category": {
+      "category_id": 5,
+      "category_name": "Withdrawal",
+      "category_type": "withdrawal"
+    },
+    "parties": [
+      { "counterparty_id": 7, "name": "Abebe Chala CHEBUDIE", "role": "receiver",       "phone_number": null,           "party_type": "person" },
+      { "counterparty_id": 8, "name": "Agent Sophia",         "role": "agent",          "phone_number": "250790777777", "party_type": "agent" },
+      { "counterparty_id": 1, "name": "Account Holder",       "role": "account_holder", "phone_number": "36521838",     "party_type": "account_owner" }
+    ],
+    "logs": [
+      { "log_id": 4, "log_type": "INFO", "log_message": "Withdrawal parsed via agent",
+        "created_at": "2024-05-26T02:10:34Z" }
+    ]
+  }
+}
