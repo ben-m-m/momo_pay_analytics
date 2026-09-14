@@ -1,0 +1,32 @@
+{
+    "transaction_id": "1",
+    "financial_transaction_id": "76662021700",
+    "external_transaction_id": null,
+    "account_number": "36521838",
+    "amount": 2000,
+    "currency": "RWF",
+    "balance_after": 2000.00,
+    "status": "completed",
+    "fee" : 0.00,
+    "sms_received_at": "2024-05-10T16:30:58Z",
+    "transaction_datetime": "2024-05-10T16:30:51Z",
+    "category": {
+        "category_id": 1,
+        "category_name": "Incoming Transfer",
+        "category_type": "incoming_transfer"
+    },
+    "parties": [
+        {
+            "counterparty_id": 1,
+            "name": "Account Holder",
+            "party_type": "account_owner",
+            "role": "account_holder"
+        },
+        {
+            "counterparty_id": 2,
+            "name": "Jane Smith",
+            "party_type": "person",
+            "role": "sender"
+        }
+    ]
+}

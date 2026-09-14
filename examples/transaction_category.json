@@ -1,0 +1,58 @@
+{
+    "incoming_transfer": {
+        "category_id": 1,
+        "category_name": "Incoming Transfer",
+        "category_type": "incoming_transfer",
+        "description": "Funds received from another party.",
+        "is_active": true
+    },
+    "outgoing_payment": {
+        "category_id": 2,
+        "category_name": "Outgoing Payment",
+        "category_type": "outgoing_payment",
+        "description": "Payment to a named party with a short ID.",
+        "is_active": true
+    },
+    "peer_transfer": {
+        "category_id": 3,
+        "category_name": "Peer Transfer",
+        "category_type": "peer_transfer",
+        "description": "*165* template: XX RWF transferred to 2507XXXXXX. New balance: XXXX RWF.",
+        "is_active": true
+    },
+    "bank_deposit": {
+        "category_id": 4,
+        "category_name": "Bank Deposit",
+        "category_type": "bank_deposit",
+        "description": "*131* template: bank deposit added",
+        "is_active": true
+    },
+    "withdrawal": {
+        "category_id": 5,
+        "category_name": "Withdrawal",
+        "category_type": "withdrawal",
+        "description": "Cash withdrawal via agent",
+        "is_active": true
+    },
+    "airtime": {
+        "category_id": 6,
+        "category_name": "Airtime Purchase",
+        "category_type": "airtime",
+        "description": "Airtime purchase or top-up",
+        "is_active": true
+    },
+    "cash_power": {
+        "category_id": 7,
+        "category_name": "Cash Power Purchase",
+        "category_type": "cash_power",
+        "description": "payment to MTN cash power with token",
+        "is_active": true
+    },
+    "merchant_deibit": {
+        "category_id": 8,
+        "category_name": "Merchant Debit",
+        "category_type": "merchant_debit",
+        "description": "*164* template: debit by a merchant",
+        "is_active": true
+    }
+}
