@@ -31,14 +31,14 @@ and what was modified or rejected.
 
 ## Summary of Usage
 
-| Category | Count | Notes |
+| Category | Notes |
 |---|---|---|
-| Grammar / syntax checking | [N] | Documentation only |
-| Code syntax verification | [N] | Confirm MySQL 8.0 syntax, not logic |
-| Best-practice research (cited) | [N] | With sources in the design doc |
-| Logic generation (prohibited) | 0 | Not used |
-| ERD generation (prohibited) | 0 | Drawn by team in Lucidchart |
-| Explanation writing (prohibited) | 0 | Written by team from source XML |
+| Grammar / syntax checking | Documentation only |
+| Code syntax verification | Confirm MySQL 8.0 syntax, not logic |
+| Best-practice research (cited) | With sources in the design doc |
+| Logic generation (prohibited) | Not used |
+| ERD generation (prohibited) | Drawn by team in Lucidchart |
+| Explanation writing (prohibited) | Written by team from source XML |
 
 ---
 
@@ -133,13 +133,4 @@ at any stage. This is recorded here to demonstrate policy compliance:
 7. **Sample data** — All 19 transactions, 11 counterparties, and 8 categories
    were transcribed from the XML by the team.
 
----
-
-## Attribution in Artifacts
-
-Where any small phrasing or syntax was improved with AI assistance, it is
-marked in the artifact:
-
-
----
 
