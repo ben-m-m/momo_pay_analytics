@@ -36,7 +36,6 @@ CREATE TABLE Transactions (
     CONSTRAINT chk_non_negative_fee CHECK (fee >= 0),
     CONSTRAINT chk_non_negative_balance CHECK (balance_after >= 0),
     CONSTRAINT chk_valid_status CHECK (status IN ('completed', 'pending', 'failed', 'reversed')),
-    CONSTRAINT chk_datetime_not_future CHECK (transaction_datetime <= NOW()),
     CONSTRAINT fk_transactions_category
         FOREIGN KEY (category_id)
         REFERENCES Transaction_Categories(category_id)
@@ -84,6 +83,20 @@ CREATE INDEX idx_txn_amount   ON Transactions(amount);
 CREATE INDEX idx_log_type     ON System_Logs(log_type);
 CREATE INDEX idx_log_created  ON System_Logs(created_at);
 CREATE INDEX idx_cp_name      ON Counterparties(name);
+
+-- Block future-dated transactions (NOW() is not allowed in CHECK constraints)
+DELIMITER //
+CREATE TRIGGER trg_block_future_date
+BEFORE INSERT ON Transactions
+FOR EACH ROW
+BEGIN
+    IF NEW.transaction_datetime > NOW() THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot insert a transaction with a future date.';
+    END IF;
+END //
+DELIMITER ;
+
 DELIMITER //
 CREATE TRIGGER trg_log_new_transaction
 AFTER INSERT ON Transactions
@@ -121,7 +134,9 @@ INSERT INTO Counterparties (name, phone_number) VALUES
     ('Jean Mugabo',    '+250788000001'),
     ('MTN MoMo Agent', '+250788000002'),
     ('Kigali Water',   '+250788000003'),
-    ('Diane Uwase',    '+250788000004');
+    ('Diane Uwase',    '+250788000004'),
+    ('Gasabo Agent',   '+250788000005'),
+    ('Airtime',        NULL);
 
 INSERT INTO Transactions (amount, reference_number, balance_after, status, fee, transaction_datetime, category_id, raw_sms_body) VALUES
     (5000.00,  'TXN20260901001', 45000.00, 'completed', 50.00,  '2026-09-01 10:30:00', 1,
@@ -141,6 +156,8 @@ INSERT INTO Transaction_Counterparties (transaction_id, counterparty_id, role) V
     (1, 1, 'receiver'),
     (2, 2, 'sender'),
     (3, 3, 'receiver'),
+    (4, 2, 'receiver'),
+    (5, 6, 'receiver'),
     (6, 4, 'receiver');
 
 -- SAMPLE QUERIES
