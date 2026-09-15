@@ -29,19 +29,6 @@ and what was modified or rejected.
 
 ---
 
-## Summary of Usage
-
-| Category | Notes |
-|---|---|---|
-| Grammar / syntax checking | Documentation only |
-| Code syntax verification | Confirm MySQL 8.0 syntax, not logic |
-| Best-practice research (cited) | With sources in the design doc |
-| Logic generation (prohibited) | Not used |
-| ERD generation (prohibited) | Drawn by team in Lucidchart |
-| Explanation writing (prohibited) | Written by team from source XML |
-
----
-
 ## Detailed Log
 
 ### Entry 001 — [2026-9-13]
