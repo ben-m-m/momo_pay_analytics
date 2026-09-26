@@ -1,3 +1,10 @@
+"""
+Public API:
+    load_transactions()  -> list[dict]
+    parse_sms_xml()      -> (txs, skipped_otp, skipped_unknown)
+    parse_and_save()     -> list[dict]
+"""
+
 import xml.etree.ElementTree as ET
 import json
 import pathlib
@@ -358,7 +365,7 @@ def save_json(transactions, path=JSON_PATH):
 
 def load_transactions(path=JSON_PATH):
     """
-    Load transactions from JSON
+    Load transactions from JSON. if file doesnt exist, generate it.
     Th e function the API and DSA modules import
     """
     if not path.exists():
@@ -371,7 +378,7 @@ def parse_and_save(xml_path=XML_PATH, json_path=JSON_PATH):
     save_json(txs, json_path)
     print(f"Saved {len(txs)} transactions")
     print(f"---Skipped {otp} OTP")
-    print(f"---skipped {unknown} unrecognized")
+    print(f"---Skipped {unknown} unrecognized")
     print(f" path -> {json_path}")
     return txs
 
